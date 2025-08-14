@@ -89,6 +89,48 @@
                 
                 <Border Grid.Row="1" Background="#FF2B2B2B" BorderThickness="0,1,0,0" BorderBrush="#FF3F3F3F">
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="10">
+                        <Button Name="TaskMgrButton" Content="Task Manager" Width="100" Height="40" Margin="5"
+                                Background="#FFAA6644" Foreground="White" BorderThickness="0"
+                                Click="TaskMgrButton_Click">
+                            <Button.Template>
+                                <ControlTemplate TargetType="Button">
+                                    <Border Background="{TemplateBinding Background}" 
+                                            BorderBrush="{TemplateBinding BorderBrush}"
+                                            BorderThickness="{TemplateBinding BorderThickness}">
+                                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                    </Border>
+                                    <ControlTemplate.Triggers>
+                                        <Trigger Property="IsMouseOver" Value="True">
+                                            <Setter Property="Background" Value="#FFBB7755"/>
+                                        </Trigger>
+                                        <Trigger Property="IsPressed" Value="True">
+                                            <Setter Property="Background" Value="#FF995533"/>
+                                        </Trigger>
+                                    </ControlTemplate.Triggers>
+                                </ControlTemplate>
+                            </Button.Template>
+                        </Button>
+                        <Button Name="RegeditButton" Content="Registry Editor" Width="100" Height="40" Margin="5"
+                                Background="#FFAA4444" Foreground="White" BorderThickness="0"
+                                Click="RegeditButton_Click">
+                            <Button.Template>
+                                <ControlTemplate TargetType="Button">
+                                    <Border Background="{TemplateBinding Background}" 
+                                            BorderBrush="{TemplateBinding BorderBrush}"
+                                            BorderThickness="{TemplateBinding BorderThickness}">
+                                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                    </Border>
+                                    <ControlTemplate.Triggers>
+                                        <Trigger Property="IsMouseOver" Value="True">
+                                            <Setter Property="Background" Value="#FFBB5555"/>
+                                        </Trigger>
+                                        <Trigger Property="IsPressed" Value="True">
+                                            <Setter Property="Background" Value="#FF993333"/>
+                                        </Trigger>
+                                    </ControlTemplate.Triggers>
+                                </ControlTemplate>
+                            </Button.Template>
+                        </Button>
                         <Button Name="LogOutButton" Content="Log Out" Width="100" Height="40" Margin="5"
                                 Background="#FF444444" Foreground="White" BorderThickness="0"
                                 Click="LogOutButton_Click">
